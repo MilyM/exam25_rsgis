@@ -68,3 +68,22 @@ Metrics:
 
 ***
 
+## Kacper Duda RAPORT
+
+#### Folder – KDuda
+
+* T1.ipynb - task1 in python
+* T1.m - task1 in matlab
+* T2.ipynb - task2 in python 
+
+***
+
+### Task 1 - everthing in folder 
+### Task 2 - I selected 3000 random points
+
+Metrics:
+* MAE: 2.1805201389567057
+* RMSE: 5.84502912652421
+* Pearson correlation: 0.21430086
+
+***
