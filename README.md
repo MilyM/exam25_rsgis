@@ -47,3 +47,24 @@ Metrics:
 
 ***
 
+## Martyna Świercz RAPORT
+
+#### Folder – Martyna_Swiercz
+
+* task1.ipynb - task1 in python
+* task1.m - task1 in matlab
+* task2.ipynb - task2 in python 
+
+***
+
+### Task 1 - everthing in folder 
+### Task 2 - I selected 4000 random points
+
+Metrics:
+* ME: 1.86 m
+* MAE: 4.32 m
+* STD: 7.58 m
+* RMSE: 7.80 m
+
+***
+
