@@ -92,9 +92,9 @@ Metrics:
 
 #### Folder – kp_exam
 
-* task1.ipynb - task1 in python
-* task1.m - task1 in matlab
-* task2.ipynb - task2 in python 
+* task1_kp.ipynb - task1 in python
+* task1_kp.m - task1 in matlab
+* task2_kp.ipynb - task2 in python 
 
 ***
 
