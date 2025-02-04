@@ -29,8 +29,6 @@ Metrics:
 * MAE: 4.30 m
 * STD: 8.52 m
 * RMSE: 9.41 m
-
-
 ***
 
 ## Weronika Budzisz RAPORT
