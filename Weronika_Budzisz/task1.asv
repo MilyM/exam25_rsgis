@@ -1,0 +1,113 @@
+%Importing data
+
+lst23 = imread("C:\egz_python\files1\t4_lst2023_Jul_May.tif")
+ndvi23 = imread("C:\egz_python\files1\t4_ndvi_2024_Jul_Aug.tif")
+lst24 = imread("C:\egz_python\files1\t4_lst2024May.tif")
+ndvi2 = imread("C:\egz_python\files1\t4_ndvi_2024May.tif")
+
+% Define custom colormaps in MATLAB using RGB values
+function cmap = create_palette(colors)
+    % Create a colormap from a list of RGB values
+    n = length(colors);  % number of color stops
+    cmap = zeros(n, 3);  % initialize the colormap matrix
+    
+    % Loop through colors and convert to RGB format if needed
+    for i = 1:n
+        cmap(i, :) = colors{i};  % assign each color
+    end
+end
+
+% Define temperature colormap: blue, cyan, green, yellow, red
+temp_palette = create_palette({[0, 0, 1], [0, 1, 1], [0, 1, 0], [1, 1, 0], [1, 0, 0]});
+
+% Define NDVI colormap: brown, yellow, green
+ndvi_palette = create_palette({[0.6, 0.3, 0.1], [1, 1, 0], [0, 1, 0]});
+
+% Define difference colormap: black, white, pink
+diff_palette = create_palette({[0, 0, 0], [1, 1, 1], [1, 0.75, 0.8]});
+
+% Display the images for 2023
+figure;
+subplot(1, 3, 1);
+imagesc(lst23);
+colorbar;
+title('Temperature 2023');
+colormap(temp_palette); 
+
+subplot(1, 3, 2);
+imagesc(ndvi23);
+colorbar;
+title('NDVI 2023');
+colormap(ndvi_palette); 
+
+subplot(1, 3, 3);
+diff1 = temp1 - ndvi1;
+imagesc(diff1);
+colorbar;
+title('Difference (Temp - NDVI) 2023');
+colormap(diff);
+
+% Create histograms for 2023
+figure;
+subplot(1, 2, 1);
+histogram(temp1(:), 50, 'FaceColor', 'blue', 'FaceAlpha', 0.7);
+title('Temperature Histogram 2023');
+xlabel('Temperature');
+ylabel('Frequency');
+
+subplot(1, 2, 2);
+histogram(ndvi1(:), 50, 'FaceColor', 'green', 'FaceAlpha', 0.7);
+title('NDVI Histogram 2023');
+xlabel('NDVI');
+ylabel('Frequency');
+
+% Scatter plot for 2023
+figure;
+scatter(ndvi1(:), temp1(:), 10, 'filled', 'MarkerFaceColor', 'purple');
+title('Scatter Plot: NDVI vs Temperature 2023');
+xlabel('NDVI');
+ylabel('Temperature');
+grid on;
+
+% Display the images for 2024
+figure;
+subplot(1, 3, 1);
+imagesc(temp2);
+colorbar;
+title('Temperature 2024');
+colormap('jet'); % Using 'jet' as the palette
+
+subplot(1, 3, 2);
+imagesc(ndvi2);
+colorbar;
+title('NDVI 2024');
+colormap('summer'); % Using 'summer' for NDVI
+
+subplot(1, 3, 3);
+diff2 = temp2 - ndvi2;
+imagesc(diff2);
+colorbar;
+title('Difference (Temp - NDVI) 2024');
+colormap('jet'); % Difference using 'jet' palette
+
+% Create histograms for 2024
+figure;
+subplot(1, 2, 1);
+histogram(temp2(:), 50, 'FaceColor', 'blue', 'FaceAlpha', 0.7);
+title('Temperature Histogram 2024');
+xlabel('Temperature');
+ylabel('Frequency');
+
+subplot(1, 2, 2);
+histogram(ndvi2(:), 50, 'FaceColor', 'green', 'FaceAlpha', 0.7);
+title('NDVI Histogram 2024');
+xlabel('NDVI');
+ylabel('Frequency');
+
+% Scatter plot for 2024
+figure;
+scatter(ndvi2(:), temp2(:), 10, 'filled', 'MarkerFaceColor', 'purple');
+title('Scatter Plot: NDVI vs Temperature 2024');
+xlabel('NDVI');
+ylabel('Temperature');
+grid on; 
