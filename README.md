@@ -87,3 +87,25 @@ Metrics:
 * Pearson correlation: 0.21430086
 
 ***
+
+## KACPER PRUSAK RAPORT
+
+#### Folder – kp_exam
+
+* task1.ipynb - task1 in python
+* task1.m - task1 in matlab
+* task2.ipynb - task2 in python 
+
+***
+
+### Task 1 - everthing in folder 
+### Task 2 - I selected 6666 random points
+
+Metrics:
+* ME: 2.15 m
+* MAE: 2.46 m
+* STD: 4.19 m
+* RMSE: 4.71 m
+
+***
+
